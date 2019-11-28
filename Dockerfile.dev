@@ -3,9 +3,9 @@ MAINTAINER Jannis Leidel <jezdez@mozilla.com>
 
 # add a non-privileged user for installing and running the application
 RUN mkdir /app && \
-    chown 10001:10001 /app && \
-    groupadd --gid 10001 app && \
-    useradd --no-create-home --uid 10001 --gid 10001 --home-dir /app app
+    chown 1000:1000 /app && \
+    groupadd --gid 1000 app && \
+    useradd --no-create-home --uid 1000 --gid 1000 --home-dir /app app
 
 RUN apt-get update && \
     apt-get install -y --no-install-recommends \
@@ -32,7 +32,7 @@ RUN export SLUGIFY_USES_TEXT_UNIDECODE=yes && pip install --no-cache-dir -r requ
 # Switch back to home directory
 WORKDIR /app
 
-USER 10001
+USER 1000
 
 ENV PYTHONUNBUFFERED=1 \
     # DEV_USERNAME= \
