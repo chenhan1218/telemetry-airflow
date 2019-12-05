@@ -1,6 +1,6 @@
 boto3
 kombu==4.6.3
-apache-airflow[celery,postgres,hive,hdfs,jdbc,async,password,crypto,github_enterprise,datadog,statsd,s3,mysql,google_auth,gcp_api,kubernetes]==1.10.2
+apache-airflow[celery,postgres,hive,hdfs,jdbc,async,password,crypto,github_enterprise,datadog,statsd,s3,mysql,google_auth,gcp_api,kubernetes]==1.10.6
 mozlogging
 retrying
 newrelic
@@ -10,4 +10,3 @@ requests
 jsonschema
 Flask-OAuthlib
 pytz
-google-cloud-bigquery==1.18.0

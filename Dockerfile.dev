@@ -1,4 +1,4 @@
-FROM python:3.6-slim
+FROM python:3.8-slim
 MAINTAINER Jannis Leidel <jezdez@mozilla.com>
 
 # add a non-privileged user for installing and running the application
@@ -9,7 +9,7 @@ RUN mkdir /app && \
 
 RUN apt-get update && \
     apt-get install -y --no-install-recommends \
-        apt-transport-https build-essential curl git libpq-dev python-dev \
+        apt-transport-https build-essential curl git libpq-dev python3.8-dev \
         default-libmysqlclient-dev gettext sqlite3 libffi-dev libsasl2-dev \
         lsb-release gnupg vim && \
     CLOUD_SDK_REPO="cloud-sdk-$(lsb_release -c -s)" && \
